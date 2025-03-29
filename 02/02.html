@@ -28,6 +28,18 @@
     </div>
     <!--container-->
     <script>
+        // Se selecciona el elemento .item-3
+        var item3 = document.querySelector(".item.item-3");
+
+        // Cambia el fondo del ancestro más cercano con clase .container a azul claro
+        item3.closest(".container").style.background = "lightblue";
+
+        // Cambia margen, padding y borde del ancestro más cercano con clase .sandbox
+        item3.closest(".sandbox").style.margin = "10px";
+        item3.closest(".sandbox").style.padding = "10px";
+        item3.closest(".sandbox").style.border = "1px solid black";
+
     </script>
-    </body>
-    </html>
+</body>
+
+</html>
