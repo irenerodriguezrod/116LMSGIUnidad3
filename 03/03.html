@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ejemplo 3 DOM</title>
 </head>
+
 <body>
     <div id="app">
         <div class="header">
@@ -14,6 +16,30 @@
         <a href="/">Enlace</a>
     </div>
     <script>
+        // seleccionar el body, se comienza la colección en 0 porque sino no funciona
+        var cuerpo = document.getElementsByTagName("body")[0];
+
+        // 1. Imprime el número de nodos hijos del elemento <body>
+        console.log("Número de nodos hijos de <body>: ", cuerpo.childNodes.length);
+
+        // 2. Imprime la lista de nodos hijos del <body>
+        console.log("Lista de nodos hijos de <body>: ", cuerpo.childNodes);
+
+        // 3. Imprime en consola el nodo padre de <body>
+        console.log("Nodo padre de <body>: ", cuerpo.parentNode);
+
+        // seleccionamos el elemento con id "app" usando querySelector 
+        // (es más flexible y puede seleccionar clases (.clase), etiquetas (div), atributos, etc.)
+        var app = document.querySelector("#app");
+        // también se podría seleccionar con getElementById
+        //var app = document.getElementById("app");
+
+        // 4. Imprime en la consola la LISTA de nodos hijos del elemento con id app
+        console.log("Lista de nodos hijos del elemento con id app: ", app.childNodes);
+        // Imprime en consola el NUMERO de nodos hijos del elemento con id app
+        //console.log("Número de nodos hijos del elemento con id app: ", app.childNodes.length);
     </script>
+
 </body>
+
 </html>
