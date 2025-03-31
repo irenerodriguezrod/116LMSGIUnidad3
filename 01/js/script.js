@@ -26,7 +26,7 @@ titulo.style.fontWeight = "bold"
 titulo.style.marginBottom = "15px"
 titulo.style.textTransform = "uppercase"
 
-// Parrafos: Tamaño fuente 18px, padding 10px, ancho 60%, border izquierdo 5px solido, border radio 5px y altura línea 1.6
+/* // Parrafos: Tamaño fuente 18px, padding 10px, ancho 60%, border izquierdo 5px solido, border radio 5px y altura línea 1.6
 // tamaño fuente
 parrafo[0].style.fontSize = "18px"
 parrafo[1].style.fontSize = "18px"
@@ -39,8 +39,8 @@ parrafo[2].style.padding = "10px"
 
 //ancho
 parrafo[0].style.width = "60%"
-/*al poner el ancho del 60%, los parrafos se mueven para la 
-izquierda... para que se queden centrados hay que poner margin auto */
+//al poner el ancho del 60%, los parrafos se mueven para la 
+izquierda... para que se queden centrados hay que poner margin auto 
 parrafo[0].style.margin = "auto"
 parrafo[1].style.width = "60%"
 parrafo[1].style.margin = "auto"
@@ -53,7 +53,17 @@ parrafo[0].style.borderRadius = "5px"
 parrafo[1].style.borderLeft = "solid 5px"
 parrafo[1].style.borderRadius = "5px"
 parrafo[2].style.borderLeft = "solid 5px"
-parrafo[2].style.borderRadius = "5px"
+parrafo[2].style.borderRadius = "5px" */
+
+//Lo correcto para los párrafos sería hacer un bucle for 
+for (let i = 0; i < parrafo.length; i++) {
+  parrafo[i].style.fontSize = "18px";
+  parrafo[i].style.padding = "10px";
+  parrafo[i].style.width = "60%";
+  parrafo[i].style.margin = "15px auto";
+  parrafo[i].style.borderLeft = "solid 5px"
+  parrafo[i].style.borderRadius = "5px"
+}
 
 // Parrafo 1: color fuente rojo #e74c3c; , color fondo: #ffe6e6, color borde: #c0392b
 parrafo[0].style.color = "#e74c3c";
