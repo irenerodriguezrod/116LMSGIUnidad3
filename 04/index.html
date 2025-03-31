@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,11 +16,13 @@
             max-width: 500px;
             margin: 0 auto;
         }
-        mark{
-            display:none;
+
+        mark {
+            display: none;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <p>Hola a todos.</p>
@@ -30,5 +33,44 @@
             <div>Esto es un desplegable que está colapsado.</div>
         </details>
     </div>
+    <script>
+        /*
+        Acceso a elementos del DOM
+        -  Seleccionar la clase .container
+        -  Seleccionar la etiqueta strong
+        -  Seleccionar la etiqueta mark
+        -  Seleccionar los parrafos con atributo hidden
+        -  Seleccionar los details
+        */
+        var container = document.querySelector(".container");
+        var strong = document.querySelector("strong");
+        var mark = document.querySelector("mark");
+        var hidden = document.querySelector("p[hidden]");
+        var details = document.querySelector("details");
+
+        /*
+        Modificar elementos del DOM
+        -  Cambiar el texto del primer nodo del container
+        -  Añadir un nuevo parrafo en el último nodo del container
+        */
+        container.firstChild.textContent = "Adiós a todos. Soy Manz";
+        container.lastElementChild.innerHTML += "<p>Saludos a todos</p>"; //se concatena para que no oculte los elementos
+
+        /*
+        - Cambiar el texto de la etiqueta strong
+        */
+        strong.textContent = "Manzano";
+
+        /*
+        - Cambiar el estilo de de mark a display='block'
+        - Borrar el atributo hidden , removeAttribute("hidden")
+        -  Detail este desplegado, details.open = true,
+        */
+        mark.style.display = "block";
+        hidden.removeAttribute("hidden");
+        details.open = true; //sin comillas porque sino no funciona
+
+    </script>
 </body>
+
 </html>
