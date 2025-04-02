@@ -37,10 +37,19 @@ Unidad 3 Manipulación de documentos web
 | **NODE**.parentNode     | Devuelve el nodo padre del nodo                                | *NULL*         |
 | **NODE**.firstChild     | Devuelve el primer nodo hijo                                   | *NULL*         |
 | **NODE**.lastChild      | Devuelve el último nodo hijo                                   | *NULL*         |
-| **NODE**.previousSibling| Devuelve el nodo hermano anterior                              | *NULL*         |
+| **NODE**.previousSibling | Devuelve el nodo hermano anterior                              | *NULL*         |
 | **NODE**.nextSibling    | Devuelve el nodo hermano siguiente                             | *NULL*         |
 
- 
+ 5. Navegar entre elementos HTML
+    
+| Propiedad de elementos HTML | Descripción                                                    | Si está vacío |
+|---------------------------------|----------------------------------------------------------------|----------------|
+| **ARRAY** .children             | Devuelve una lista de elementos HTML hijos                     | []        |
+| **ELEMENT**.parentELEMENT       | Devuelve el padre del Elemento                                 | *NULL*         |
+| **NODE**.firstElementChild      | Devuelve el primer elemento hijo                               | *NULL*         |
+| **NODE**.lastElementChild       | Devuelve el último elemento hijo                               | *NULL*         |
+| **NODE**.previousElementSibling | Devuelve el elemento hermano anterior                          | *NULL*         |
+| **NODE**.nextElementSibling     | Devuelve el elemento hermano siguiente                         | *NULL*         |
 
 ### Modificar el contenido DOM
 
