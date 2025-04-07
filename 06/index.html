@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejemplo 6 Cambiar Atributo con JavaScript</title>
 </head>
+
 <body>
     <h1>Cambiar Atributo con JavaScript</h1>
     <p>Al pulsar el botón se cambia la imagen y su atributo 'alt'.</p>
@@ -12,8 +14,16 @@
     <img id="miImagen" src="imagen1.jpg" alt="Imagen original" width="300">
     <br><br>
     <button onclick="cambiarImagen()">Cambiar Imagen</button>
-    <script>
- </script>
 
+    <script>
+        
+        function cambiarImagen() {
+            const imagen = document.getElementById("miImagen");
+            imagen.src = "imagen2.jpg";
+            imagen.alt = "Imagen cambiada";
+        }
+
+    </script>
 </body>
-</html>     
+
+</html>
