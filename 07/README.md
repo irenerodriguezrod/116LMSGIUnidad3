@@ -1,9 +1,9 @@
 ## Ejemplo 7  Manipulando el DOM
 
 Partimos de la siguiente página.
-![
-    
-](image.png)
+
+![image](https://github.com/user-attachments/assets/289fcb2a-4998-4cd4-acca-75b410b6a9eb)
+
 
 ## Se pide el siguiente código JavaScript
 document.getElementById("agregarFinal").addEventListener("click", function(){
