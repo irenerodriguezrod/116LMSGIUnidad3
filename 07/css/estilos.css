@@ -1,0 +1,54 @@
+/* Declaración de variables en :root */
+:root {
+    --fondoBotones: #333333;
+    --colorBoton: #3498DB;
+}
+
+body {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Estilo para el contenedor de botones */
+.botones {
+    background-color: var(--fondoBotones);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    border-radius: 5px;
+    width: 100%; /* botones no se expandan más allá del contenedor */
+}
+
+/* Caja de texto que se va a introducir en el contenedor */
+input[type="text"] {
+    border: solid 1px black;
+    margin: 10px 0; /* margen superior e inferior */
+    padding: 0.5em; /* espacio dentro del input */
+    box-sizing: border-box; 
+    border-radius: 5px; /* Bordes redondeados para el input */
+}
+
+/* Estilo para los botones */
+input[type="button"] {
+    width: 100%; /* Los botones ocupan todo el ancho de su contenedor */
+    background-color: var(--colorBoton);
+    color: white; 
+    padding: 1em; 
+    border: none; 
+    margin: 0.5em 0; /* espacio entre los botones */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; 
+}
+
+/* Estilo para el contenedor de párrafos */
+#contenedor {
+    margin-bottom: 0.2em;
+    margin-left: 0; /* Alineación a la izquierda */
+    border: solid 2px black;
+    min-height: 20px;
+    padding: 0.2em;
+    background-color: #f9f9f9; /* Color de fondo suave para el contenedor */
+    border-radius: 5px; /* Bordes redondeados */
+}
