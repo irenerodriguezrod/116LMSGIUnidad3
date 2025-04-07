@@ -16,11 +16,29 @@
     <button onclick="cambiarImagen()">Cambiar Imagen</button>
 
     <script>
+        /* 
+        Esto sólo cambia la imagen, pero si se vuelve a dar al botón no vuelve a la anterior
         
         function cambiarImagen() {
             const imagen = document.getElementById("miImagen");
             imagen.src = "imagen2.jpg";
             imagen.alt = "Imagen cambiada";
+        }
+        
+        */
+
+        function cambiarImagen() {
+            const imagen = document.getElementById("miImagen");
+
+            // en caso de que el atributo 'alt' de la imagen sea "Imagen original", cambiará a la imagen 2
+            if (imagen.alt === "Imagen original") { // la comparación para si es igual a algo se ponen 3 símbolos de igual
+                imagen.src = "imagen2.jpg";
+                imagen.alt = "Imagen cambiada";
+            } else {
+                // en caso de que sea la 2(el 'alt' de la imagen es "Imagen cambiada"), vuelve a 1
+                imagen.src = "imagen1.jpg";
+                imagen.alt = "Imagen original";
+            }
         }
 
     </script>
