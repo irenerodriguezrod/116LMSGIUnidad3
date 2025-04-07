@@ -8,4 +8,22 @@
 <body>
     <header class="card"></header>
 </body>
+<script>
+    // Seleccionar el elemento header (querySelector)
+    const header = document.querySelector("header");
+
+    // Añadir al header, <h1>Esto es un título</h1>
+    const h1 = document.createElement("h1");
+    h1.textContent = "Esto es un título";
+    header.appendChild(h1);
+
+    // Añadir al elemento anterior, <p>Esto es un parrafo</p>
+    const p = document.createElement("p");
+    p.textContent = "Esto es un párrafo"
+    header.appendChild(p);
+
+    // Añadir los styles: background-color:#f0f0f0 y padding de 10px.
+    header.style.backgroundColor = "#f0f0f0"
+    header.style.padding = "10px";
+</script>
 </html>
