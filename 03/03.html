@@ -17,25 +17,29 @@
     </div>
     <script>
         // seleccionar el body, se comienza la colección en 0 porque sino no funciona
-        var cuerpo = document.getElementsByTagName("body")[0];
+        //var cuerpo = document.getElementsByTagName("body")[0];
+        const app = document.querySelector("body").childNodes.length;
 
         // 1. Imprime el número de nodos hijos del elemento <body>
-        console.log("Número de nodos hijos de <body>: ", cuerpo.childNodes.length);
+        console.log("Número de nodos hijos de <body>: ", app);
 
+        const app1 = document.querySelector("body").children.length;
         // 2. Imprime la lista de nodos hijos del <body>
-        console.log("Lista de nodos hijos de <body>: ", cuerpo.childNodes);
+        //console.log("Lista de nodos hijos de <body>: ", cuerpo.childNodes);
+        console.log("Lista de nodos hijos de <body>: ", app1);
 
         // 3. Imprime en consola el nodo padre de <body>
-        console.log("Nodo padre de <body>: ", cuerpo.parentNode);
+        console.log("Nodo padre de <body>: ", body.parentNode);
 
         // seleccionamos el elemento con id "app" usando querySelector 
         // (es más flexible y puede seleccionar clases (.clase), etiquetas (div), atributos, etc.)
-        var app = document.querySelector("#app");
+        var app2 = document.querySelector("#app");
         // también se podría seleccionar con getElementById
         //var app = document.getElementById("app");
 
         // 4. Imprime en la consola la LISTA de nodos hijos del elemento con id app
-        console.log("Lista de nodos hijos del elemento con id app: ", app.childNodes);
+        //console.log("Lista de nodos hijos del elemento con id app: ", app.childNodes);
+        console.log("Lista de nodos hijos del elemento con id app: ", body.children);
         // Imprime en consola el NUMERO de nodos hijos del elemento con id app
         //console.log("Número de nodos hijos del elemento con id app: ", app.childNodes.length);
     </script>
