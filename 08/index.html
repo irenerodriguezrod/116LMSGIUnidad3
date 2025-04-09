@@ -9,10 +9,39 @@
   <body>
     <h1>Ejemplo 8 DOM: Crear tabla</h1>
     <label for="filas">Número de filas:</label>
-    <input type="number" id="filas" min="1" max="10" value="2">  
+    <input type="number" id="filas" min="1" max="10" value="2"> <!--Minimo 1, maximo 10. Si no se pone nada por defecto es 2-->
     <label for="numerocolumnas">Número de columnas:</label>
     <input type="number" id="numerocolumnas"  min="1" max="10" value="2">
     <input type="button" value="Genera una tabla" onclick="genera_tabla()" />
   </body>
-  <script></script>
+  <script>
+    function genera_tabla(){
+      var cuerpo = document.getElementsByTagName("body")[0]; //al ser un array, se tiene que seleccionar una posición. 0 para que coja el primero
+      var filas = document.getElementById("filas").value;
+      var columnas = document.getElementById("numerocolumnas").value;
+
+      //limpiar el contenido del body
+      cuerpo.innerHTML = '<h1>Ejemplo 8 DOM: Crear tabla</h1> <label for="filas">Número de filas:</label> <input type="number" id="filas" min="1" max="10" value="2"> <label for="numerocolumnas">Número de columnas:</label> <input type="number" id="numerocolumnas"  min="1" max="10" value="2"> <input type="button" value="Genera una tabla" onclick="genera_tabla()" />'
+    
+      var tabla = document.createElement("table");
+      var tbody = document.createElement("tbody");
+
+      //se pone f porque filas ya lo hemos definido arriba y si se vuelve a poner filas da error
+      for (let f=1;f<=filas;f++){ //bucle para crear las filas
+        var tr =document.createElement("tbody");
+
+        for(let c=1;c<=columnas;c++){ //bucle para crear las columnas
+          var td = document.createElement("td");
+          var textoCelda = document.createTextNode("Fila "+ f + " , "+ "Columna " + c);
+
+          td.appendChild(textoCelda); //va sin comillas pq es una variable
+          tr.appendChild(td);//por cada fila(tr) se añaden los td necesarios
+        }
+        tbody.appendChild(tr);
+      }
+      tabla.appendChild(tbody);
+      cuerpo.appendChild(tabla);
+      tabla.setAttribute("border","2");
+    }
+  </script>
   </html>
